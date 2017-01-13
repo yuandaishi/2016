@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<style type="text/css">
+			#calculate{
+				display: inline-block;padding: 10px 20px;background: grey;border-radius: 5px;text-decoration: none;color: #333333;
+			}
+			#calculate:active{
+				background: goldenrod;
+			}
+		</style>
+	</head>
+	<body>
+		<svg version="1.1" width="100%" height="1000">
+			<defs>
+				<radialGradient id="radial">
+					<stop offset="0%" stop-color="red"/>
+					<stop offset="100%" stop-color="blue"/>
+				</radialGradient>
+			</defs>
+			<rect width="300" height="300" rx="10" ry="10" x="10" y="10" fill="url(#radial)"/>
+			<path d="M 500 50 l 100 0 l 0 100 l-100 0 Z" stroke="blue" stroke-width="3" fill="transparent"/>
+			<path d="M 700 100 l 100 0 C 750 150 800 470 900 270" stroke="gold" storke-width="3" fill="transparent"/>
+			<circle cx="700" cy="100" r="2" fill="red"/>
+			<circle cx="750" cy="150" r="2" fill="red"/>
+			<circle cx="800" cy="470" r="2" fill="red"/>
+			<circle cx="900" cy="270" r="2" fill="red"/>
+			<path d="M 900 300 C 1000 100 1200 100 1300 300 C 1400 500 1600 500 1700 300" stroke="pink" stroke-width="3" fill="transparent" />
+			<!--<path d="M 900 300 C 1000 100 1200 100 1300 300 S 1600 500 1700 300" stroke="pink" stroke-width="3" fill="transparent">-->
+			<!--使用S 相当于省掉第一个点（斜率不变）-->
+			<!--本塞尔曲线中定义的点，如果使用相对坐标的话，则几个点都是相对于贝塞尔曲线的起点，也就是c字母或者q字母之前的点，而不是相邻的前一个点-->
+			<path d="M 200 700 q 30 -50 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0" stroke="green" stroke-width="2" fill="transparent"/>
+		</svg>
+		<svg width="320px" height="320px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 315
+           L 110 215
+           A 30 50 0 0 1 162.55 162.45
+           L 172.55 152.45
+           A 30 50 -45 0 1 215.1 109.9
+           L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
+</svg>
+<!--两个点确定了两个圆形，每个圆形能画出两个弧线，所以一共有4中情况-->
+<svg width="100%" height="325px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M80 80
+           A 45 45, 0, 0, 0, 125 125
+           L 125 80 Z" fill="green"/>
+           <!--圆形是否旋转没有任何意义，椭圆的话才有意义-->
+  <path d="M230 80
+           A 45 45, 60, 1, 0, 275 125
+           L 275 80 Z" fill="red"/>
+  <path d="M80 230
+           A 45 45, 0, 0, 1, 125 275
+           L 125 230 Z" fill="purple"/>
+  <path d="M230 230
+           A 45 45, 0, 1, 1, 275 275
+           L 275 230 Z" fill="blue"/>
+</svg>
+<svg version="1.1" width="100%" height="500">
+	<defs>
+		<linearGradient id="liner0" x1="0.3" y1="0.3" x2="1" y2="1">
+			<stop offset="0" stop-color="pink"/>
+			<stop offset=".3" stop-color="gold"/>
+			<stop offset=".6" stop-color="black"/>
+			<stop offset="1" stop-color="green"/>
+		</linearGradient>
+		<linearGradient id="liner1" x1="0.3" y1="0.3" x2="1" y2="1">
+			<stop offset="0" stop-color="antiquewhite"/>
+			<stop offset=".3" stop-color="aqua"/>
+			<stop offset=".6" stop-color="azure"/>
+			<stop offset="1" stop-color="aliceblue"/>
+		</linearGradient>
+		<linearGradient id="liner2" x1="0.3" y1="0.3" x2="1" y2="1">
+			<stop offset="0" stop-color="beige"/>
+			<stop offset=".3" stop-color="bisque"/>
+			<stop offset=".6" stop-color="blueviolet"/>
+			<stop offset="1" stop-color="brown"/>
+		</linearGradient>
+		<linearGradient id="liner3" x1="0.3" y1="0.3" x2="1" y2="1">
+			<stop offset="0" stop-color="cadetblue"/>
+			<stop offset=".3" stop-color="chartreuse"/>
+			<stop offset=".6" stop-color="chocolate"/>
+			<stop offset="1" stop-color="cornsilk"/>
+		</linearGradient>
+	</defs>
+	<path d="M 150 150 a 100 100 0 0 1 100 -100 L 250 150 Z" stroke="transparent" fill="url(#liner0)"/>
+	<path d="M 250 50 a 100 100 0 0 1 100 100 L 250 150" stroke="transparent" fill="url(#liner1)"/>
+	<path d="M 350 150 a 100 100 0 0 1 -100 100 L 250 150" stroke="transparent" fill="url(#liner2)"/>
+	<path d="M 250 250 a 100 100 0 0 1 -100 -100 L 250 150" stroke="transparent" fill="url(#liner3)"/>
+</svg>
+<svg version="1.1" width="100%" height='1000' font-size="60">
+	<defs>
+		<linearGradient id="liner0" x1="0.3" y1="0.3" x2="1" y2="1">
+			<stop offset="0" stop-color="pink"/>
+			<stop offset=".3" stop-color="gold"/>
+			<stop offset=".6" stop-color="black"/>
+			<stop offset="1" stop-color="green"/>
+		</linearGradient>
+		<linearGradient id="liner1" x1="0.3" y1="0.3" x2="1" y2="1">
+			<stop offset="0" stop-color="antiquewhite"/>
+			<stop offset=".3" stop-color="aqua"/>
+			<stop offset=".6" stop-color="azure"/>
+			<stop offset="1" stop-color="aliceblue"/>
+		</linearGradient>
+		<linearGradient id="liner2" x1="0.3" y1="0.3" x2="1" y2="1">
+			<stop offset="0" stop-color="beige"/>
+			<stop offset=".3" stop-color="bisque"/>
+			<stop offset=".6" stop-color="blueviolet"/>
+			<stop offset="1" stop-color="brown"/>
+		</linearGradient>
+		<linearGradient id="liner3" x1="0.3" y1="0.3" x2="1" y2="1">
+			<stop offset="0" stop-color="cadetblue"/>
+			<stop offset=".3" stop-color="chartreuse"/>
+			<stop offset=".6" stop-color="chocolate"/>
+			<stop offset="1" stop-color="cornsilk"/>
+		</linearGradient>
+		<pattern x="0" y="0" width="550" height="550" id="pattern">
+			<path d="M 150 150 a 100 100 0 0 1 100 -100 L 250 150 Z" stroke="transparent" fill="url(#liner0)"/>
+			<path d="M 250 50 a 100 100 0 0 1 100 100 L 250 150" stroke="transparent" fill="url(#liner1)"/>
+			<path d="M 350 150 a 100 100 0 0 1 -100 100 L 250 150" stroke="transparent" fill="url(#liner2)"/>
+			<path d="M 250 250 a 100 100 0 0 1 -100 -100 L 250 150" stroke="transparent" fill="url(#liner3)"/>
+		</pattern>
+		<path d="M 30 800 q 70 -120 140 0 t 140 0 t 140 0 t 140 0 t 140 0" id="textPath"></path>
+	</defs>
+	<circle cx="100" cy="100" r="10" fill="blue"/>
+	<text x="100" y="100" text-anchor="middle">深林里有树也有花</text>
+	<text x="100" y="200 300" text-anchor="start">深林里<tspan fill="gold" y="50 100">呦呦</tspan>有树也有花</text>
+	<text x="100" y="300" text-anchor="end" fill="pink">深林里有树也有花</text>
+	<text x="100" y="400" text-anchor="inherit" fill="url(#pattern)">深林里有树也有花</text>
+	<!--text-anchor定义文字什么地方和x，y坐标重合-->
+	<path id="my_path" d="M 80,80 C 40,40 80,40 100,20" fill="transparent"/>
+	<text font-size="20">
+	  <textPath xlink:href="#my_path">This text follows a curve.</textPath>
+	</text>
+	<text x="100" y="500" rotate="0 30 60 90 120 150 180 210 240 270 300 330 360 30" textLength="1300" font-size="60">老子是个大盗贼，什么卵也不怕</text>
+	<text y="800" font-size="30"><textPath xlink:href="#textPath" textLength="600">用力活着，用力爱，哪怕肝脑涂地</textPath></text>
+	<path d="M 0 900 q 60 -60 120 0 t 120 0" id="textPath" fill="transparent" stroke="black" stroke-width="3"  ></path>
+</svg>
+	<svg version="1.1" width="100%" height="500">
+		<defs>
+			<clipPath id="cl_1">
+				<rect x="40" y="40" width="120" height="60" fill="blue"/>
+			</clipPath>
+			<!--这样些的话，则是clipPath之中图形的并集作为clip-->
+			<clipPath id="cl_2">
+				<circle cx="190" cy="260" r="60"/>
+				<circle cx="230" cy="300" r="60"/>
+				<circle cx="190" cy="340" r="60"/>
+				<circle cx="150" cy="300" r="60"/>
+			</clipPath>
+			<!--<clipPath id="cl_3" clip-path="url(#cl_2)">
+				<rect x="40" y="150" width="300" height="300" fill="transparent"/>
+			</clipPath>-->
+		</defs>
+		<rect x="40" y="40" width="120" height="60" fill="blue"/>
+		<!--clip这些图形以外的部分都被裁减-->
+		<circle cx="100" cy="100" r="60" fill="gold" clip-path="url(#cl_1)"/>
+		<rect x="40" y="150" width="300" height="300" fill="gold"/>
+		<rect x="40" y="150" width="300" height="300" fill="white" clip-path="url(#cl_2)" opacity=".5"/>
+	</svg>
+	<svg version="1.1" width="100%" height="500">
+		<linearGradient id="line_1">
+			<stop offset="0" stop-color="green"/>
+			<stop offset="1" stop-color="red"/>
+		</linearGradient>
+		<linearGradient id="line_2">
+			<stop offset="0" stop-opacity="0" stop-color="white"/>
+			<stop offset="1" stop-opacity="1" stop-color="white"/>
+		</linearGradient>
+		 <mask id="mask">
+      		<rect x="10" y="220" width="200" height="200" fill="url(#line_2)"  />
+   		 </mask>
+		<rect x="10" y="10" width="200" height="200" fill="url(#line_1)"/>
+		<rect x="10" y="220" width="200" height="200" fill="green"/>
+		<rect x="10" y="220" width="200" height="200" fill="red" mask="url(#mask)"/>
+	</svg>
+	<svg version="1.1" width="100%" height="400">
+		<path id="path_1" fill="red" stroke="white" stroke-width="2" d=""/>
+		<path id="path_2" fill="green" stroke="white" stroke-width="2" d=""/>
+		<path id="path_3" fill="blue" stroke="white" stroke-width="2" d=""/>
+		<path id="path_4" fill="yellow" stroke="white" stroke-width="2" d=""/>
+		<path id="path_5" fill="pink" stroke="white" stroke-width="2" d=""/>
+	</svg>
+	<label>red:<input type="number" value="1" id="red"></label>
+	<label>green：<input type="number" value="1" id="green"></label>
+	<label>blue：<input type="number" value="1" id="blue"></label>
+	<label>yellow：<input type="number" value="1" id="yellow"></label>
+	<label>pink：<input type="number" value="1" id="pink"></label>
+	<a id="calculate" href="javascript:;">计算</a>
+	</body>
+	<script type="text/javascript">
+		var redDom=document.getElementById("red");
+		var greenDom=document.getElementById("green");
+		var blueDom=document.getElementById("blue");
+		var yellowDom=document.getElementById("yellow");
+		var pinkDom=document.getElementById("pink");
+		var path_1=document.getElementById("path_1");
+		var path_2=document.getElementById("path_2");
+		var path_3=document.getElementById("path_3");
+		var path_4=document.getElementById("path_4");
+		var path_5=document.getElementById("path_5");
+		var calculateDom=document.getElementById("calculate");
+		render();
+		calculateDom.onclick=render;
+		function render(){
+			var r=redDom.value,g=greenDom.value,b=blueDom.value,y=yellowDom.value,p=pinkDom.value;
+			var m=parseInt(r)+parseInt(g)+parseInt(b)+parseInt(y)+parseInt(p);
+			console.log(r/m)
+			var rAngle=(r/m)*Math.PI*2;
+			console.log(rAngle)
+			var gAngle=(g/m)*Math.PI*2;
+			var bAngle=(b/m)*Math.PI*2;
+			var yAngle=(y/m)*Math.PI*2;
+			var pAngle=(p/m)*Math.PI*2;
+			var angleS="0";//初始角度
+			//大弧线还是小弧线
+			var rA=largeOr(rAngle);
+			var gA=largeOr(gAngle);
+			var bA=largeOr(bAngle);
+			var yA=largeOr(yAngle);
+			var pA=largeOr(pAngle);
+			//坐标
+			var startX=200+Math.sin(angleS)*100;
+			var stratY=200-Math.cos(angleS)*100;
+			var rEndX=200+Math.sin(rAngle+angleS)*100;
+			var rEndY=200-Math.cos(rAngle+angleS)*100;
+			var gEndX=200+Math.sin(gAngle+rAngle+angleS)*100;
+			var gEndY=200-Math.cos(gAngle+rAngle+angleS)*100;
+			var bEndX=200+Math.sin(gAngle+rAngle+bAngle+angleS)*100;
+			var bEndY=200-Math.cos(gAngle+rAngle+bAngle+angleS)*100;
+			var yEndX=200+Math.sin(gAngle+rAngle+bAngle+yAngle+angleS)*100;
+			var yEndY=200-Math.cos(gAngle+rAngle+bAngle+yAngle+angleS)*100;
+			var pEndX=200+Math.sin(gAngle+rAngle+bAngle+yAngle+pAngle+angleS)*100;
+			var pEndY=200-Math.cos(gAngle+rAngle+bAngle+yAngle+pAngle+angleS)*100;
+			var str_r="M 200 200 L "+startX+" "+stratY+" "+"A 100 100 0 "+rA+" 1 "+rEndX+" "+rEndY+" Z";
+			var str_g="M 200 200 L "+rEndX+" "+rEndY+" "+"A 100 100 0 "+rA+" 1 "+gEndX+" "+gEndY+" Z";
+			var str_b="M 200 200 L "+gEndX+" "+gEndY+" "+"A 100 100 0 "+rA+" 1 "+bEndX+" "+bEndY+" Z";
+			var str_y="M 200 200 L "+bEndX+" "+bEndY+" "+"A 100 100 0 "+rA+" 1 "+yEndX+" "+yEndY+" Z";
+			var str_p="M 200 200 L "+yEndX+" "+yEndY+" "+"A 100 100 0 "+rA+" 1 "+pEndX+" "+pEndY+" Z";
+			path_1.setAttribute("d",str_r);
+			path_2.setAttribute("d",str_g);
+			path_3.setAttribute("d",str_b);
+			path_4.setAttribute("d",str_y);
+			path_5.setAttribute("d",str_p);
+		}
+		function largeOr(a){
+			if(a>=Math.PI){
+				return 1;
+			}
+			return 0;
+		}
+	</script>
+</html>

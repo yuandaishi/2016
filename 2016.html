@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="cache-control" content="no-cache">
+		<title>lose@2016</title>
+		<style type="text/css">
+			body,p{
+				margin: 0;
+				padding: 0;
+			}
+			ul,li{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			ul li{
+				font-size: 25px;
+				margin: 15px;
+				padding: 10px 5px;
+			}
+			ul li:nth-child(2n){
+				background: rgba(191,191,191,.7);
+			}
+			ul li:nth-child(2n+1){
+				background: rgba(238,238,238,.7);
+			}
+			.content{
+				top: 0;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				transform: scale(0);
+				overflow: hidden;
+			}
+			.content_1{
+				background: url(img/spring_02.jpg) no-repeat center center;
+				background-size: cover;
+			}
+			.content_2{
+				background: url(img/summer_01.jpg) no-repeat center center;
+				background-size: cover;
+			}
+			.content_3{
+				background: linear-gradient(to bottom, #dcebf1 0%, #fafcfd 30%);
+			}
+			.content_3::before{
+				content: " ";
+			    display: block;
+			    position: absolute;
+			    top: 0;
+			    left: -50%;
+			    width: 200%;
+			    height: 100%;
+			    z-index: -2;
+				background: url(img/1.png);
+				background-size: 40rem 40rem;
+				animation: snow 28s linear infinite;
+			}
+			.content_3::after{
+				content: " ";
+			    display: block;
+			    position: absolute;
+			    top: 0;
+			    left: -50%;
+			    width: 200%;
+			    height: 100%;
+			    z-index: -1;
+			    background: url(img/2.png);
+			    background-size: 40rem 40rem;
+			    animation: snow 18s linear infinite;
+			}
+			.content_4{
+				background: linear-gradient(to bottom, #a0a0a0 0%, #bfbfbf 30%);
+			}
+			.content_4::before{
+				content: " ";
+			    display: block;
+			    position: absolute;
+			    top: 0;
+			    left: -50%;
+			    width: 200%;
+			    height: 100%;
+			    z-index: -2;
+			    background-size: 40rem 40rem;
+				background: url(img/falling-snow1.png);
+				animation: snow 28s linear infinite;
+			}
+			.content_4::after{
+				content: " ";
+			    display: block;
+			    position: absolute;
+			    top: 0;
+			    left: -50%;
+			    width: 200%;
+			    height: 100%;
+			    z-index: -1;
+			    background-size: 40rem 40rem;
+			    background-image: url(img/falling-snow2.png);
+			    animation: snow 18s linear infinite;
+			}
+			.blackHole{
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				transform: scale(0);
+				margin: auto auto;
+			}
+			.blackHole.rotate{
+				animation: rotates 3s linear forwards;
+			}
+			.back{
+				display: block;
+				width: 75px;
+				height: 75px;
+				border-radius: 50%;
+				text-decoration: none;
+				color: #CCC9A8;
+				background: bisque;
+				text-align: center;
+				line-height: 75px;
+				margin: 5px;
+			}
+			@keyframes rotates{
+				0% {
+					transform: scale(0) rotateZ(0deg);
+				}
+				20% {
+					transform: scale(0.6) rotateZ(0deg);
+				}
+				25%{
+					transform: scale(0.8) rotateZ(0deg);
+				}
+				70%{
+					transform: scale(2) rotateZ(-40deg);
+				}
+				75%{
+					transform: scale(2.1) rotateZ(-45deg);
+				}
+				100%{
+					transform: scale(0) rotateZ(-50deg);
+				}
+			}
+
+			@-webkit-keyframes snow {
+				0% {
+					background-position-x: 0;
+					background-position-y: 0
+				}
+				50% {
+					background-position-y: 40rem
+				}
+				100% {
+					background-position-x: 40rem;
+					background-position-y: 80rem
+				}
+			}
+			
+			@keyframes snow {
+				0% {
+					background-position-x: 0;
+					background-position-y: 0
+				}
+				50% {
+					background-position-y: 40rem
+				}
+				100% {
+					background-position-x: 40rem;
+					background-position-y: 80rem
+				}
+			}
+			.season{
+				-webkit-user-select:none;
+			}
+			/*@media only screen and (orientation: landscape ) {
+				html{
+					transform: rotateZ(90deg);
+				}
+			}*/
+		</style>
+	</head>
+	<body style="font-size: 0;height: 100%;position: relative;overflow: hidden;">
+		<div id="container_1" style="width:100%; height:100%;display: block;">
+			<svg width="100%" height="100%" style="background: pink;" id="svg_1">
+				<defs>
+					<linearGradient id="liner0" x1="0" y1="1" x2="1" y2="0">
+						<stop offset="0" stop-color="green"/>
+						<stop offset=".33" stop-color="red"/>
+						<stop offset=".66" stop-color="gold"/>
+						<stop offset=".9" stop-color="white"/>
+					</linearGradient>
+				</defs>
+				<path d="" fill="transparent" stroke="url(#liner0)" stroke-width="5px" id="path"/>
+				<a xlink:href="#animateMotion" class="seasonG"><g id="spring">
+					<circle cx="" cy="" r="35" fill="green" stroke="transparent" stroke-width="0" class="cir cir_0"></circle>
+					<text style="font-size: 30px;font-family: '楷体';" x="" y="" text-anchor="middle" class="season season_0">春</text>
+				</g></a>
+				<a xlink:href="#animateMotion" class="seasonG"><g id="summer">
+					<circle cx="" cy="" r="35" fill="red" stroke="transparent" stroke-width="0" class="cir cir_1"></circle>
+					<text style="font-size: 30px;font-family: '楷体';" x="" y="" text-anchor="middle" class="season season_1">夏</text>
+				</g></a>
+				<a xlink:href="#animateMotion" class="seasonG"><g id="autumn">
+					<circle cx="" cy="" r="35" fill="gold" stroke="transparent" stroke-width="0" class="cir cir_2"></circle>
+					<text style="font-size: 30px;font-family: '楷体';" x="" y="" text-anchor="middle" class="season season_2">秋</text>
+				</g></a>
+				<a xlink:href="#animateMotion" class="seasonG"><g id="winter">
+					<circle cx="" cy="" r="35" fill="white" stroke="transparent" stroke-width="0" class="cir cir_3"></circle>
+					<text style="font-size: 30px;font-family: '楷体';" x="" y="" text-anchor="middle" class="season season_3">冬</text>
+				</g></a>
+	
+				<!--解决参照路劲原点偏移的问题，复制一个镜像，其实移动的是镜像-->
+				<g id="springCopy" class="seasonGCopy">
+					<animateMotion dur="2s" path="" repeatCount="1" rotate="auto"  begin="virtual.end"  fill="remove" class="showG"/>
+					<animateMotion dur="2s" path="" repeatCount="1" rotate="auto"  begin="animateMotion.end+1s"  fill="remove" class="fadeG"/>
+					<circle cx="0" cy="0" r="35" fill="transparent" stroke="transparent" stroke-width="0" class="cirCopy cir_0_Copy">
+						<!--//有参照路劲的时候，滑动物体的原点等于路劲原点，所以要重新设置圆心坐标,应为g标签不能设置坐标，所以分开设置圆和字体坐标-->
+						<!--坐标系不是当前位置为坐标原点，而是初始坐标系，所以to=0，就会回到初始位置-->
+						<!--dur--指定简单持续时间的时长。值必须大于0。可以用小时（h）、分钟（m）、秒（s）、毫秒（ms）表达这个值。可以组合这些时间表达式以提供一个复合的持续时间，比如这样：hh:mm:ss.iii或者这样：mm:ss.iii。-->
+						<!--本人测试，用m为单位，并不可行-->
+						<!--<animate attributeName="cx" to="0" dur="0.1ms" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="cy" to="0" dur="0.1ms" begin="animateMotion.end+1s" fill="freeze"/>-->
+						<animate attributeName="r" to="35" dur="2s" begin="virtual.end" fill="freeze"/>
+						<animate attributeName="fill" to="transparent" dur="0.1ms" begin="virtual.end+2s" fill="freeze"/>
+						<animate attributeName="r" to="0" dur="2s" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="fill" to="green" dur="0.1ms" begin="animateMotion.end+1s" fill="freeze"/>
+					</circle>
+					<text style="font-size: 30px;font-family: '楷体';" x="0" y="10" text-anchor="middle" fill="transparent" class="seasonCopy season_0_Copy">春
+						<animate attributeName="font-size" to="30" dur="2s" begin="virtual.end" fill="freeze"/>
+						<animate attributeName="y" to="10" dur="2s" begin="virtual.end" fill="freeze"/>
+						<animate attributeName="fill" to="transparent" dur="0.1ms" begin="virtual.end+2s" fill="freeze"/>
+						<animate attributeName="font-size" to="0" dur="2s" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="y" to="0" dur="2s" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="fill" to="black" dur="0.1ms" begin="animateMotion.end+1s" fill="freeze"/>
+					</text>
+				</g>
+				<g id="summerCopy" class="seasonGCopy">
+					<animateMotion dur="2s" path="" repeatCount="1" rotate="auto"  begin="virtual.end"  fill="remove" class="showG"/>
+					<animateMotion dur="2s" path="" repeatCount="1" rotate="auto"  begin="animateMotion.end+1s"  fill="remove" class="fadeG"/>
+					<circle cx="0" cy="0" r="35" fill="transparent" stroke="transparent" stroke-width="0" class="cirCopy cir_1_Copy">
+						<animate attributeName="r" to="35" dur="2s" begin="virtual.end" fill="freeze"/>
+						<animate attributeName="fill" to="transparent" dur="0.1ms" begin="virtual.end+2s" fill="freeze"/>
+						<animate attributeName="r" to="0" dur="2s" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="fill" to="red" dur="0.1ms" begin="animateMotion.end+1s" fill="freeze"/>
+					</circle>
+					<text style="font-size: 30px;font-family: '楷体';" x="0" y="10" text-anchor="middle" fill="transparent" class="seasonCopy season_0_Copy">夏
+						<animate attributeName="font-size" to="30" dur="2s" begin="virtual.end" fill="freeze"/>
+						<animate attributeName="y" to="10" dur="2s" begin="virtual.end" fill="freeze"/>
+						<animate attributeName="fill" to="transparent" dur="0.1ms" begin="virtual.end+2s" fill="freeze"/>
+						<animate attributeName="font-size" to="0" dur="2s" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="y" to="0" dur="2s" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="fill" to="black" dur="0.1ms" begin="animateMotion.end+1s" fill="freeze"/>
+					</text>
+				</g>
+				<g id="autumnCopy" class="seasonGCopy">
+					<animateMotion dur="2s" path="" repeatCount="1" rotate="auto"  begin="virtual.end"  fill="remove" class="showG"/>
+					<animateMotion dur="2s" path="" repeatCount="1" rotate="auto"  begin="animateMotion.end+1s"  fill="remove" class="fadeG"/>
+					<circle cx="0" cy="0" r="35" fill="transparent" stroke="transparent" stroke-width="0" class="cirCopy cir_2_Copy">
+						<animate attributeName="r" to="35" dur="2s" begin="virtual.end" fill="freeze"/>
+						<animate attributeName="fill" to="transparent" dur="0.1ms" begin="virtual.end+2s" fill="freeze"/>
+						<animate attributeName="r" to="0" dur="2s" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="fill" to="gold" dur="0.1ms" begin="animateMotion.end+1s" fill="freeze"/>
+					</circle>
+					<text style="font-size: 30px;font-family: '楷体';" x="0" y="10" text-anchor="middle" fill="transparent" class="seasonCopy season_0_Copy">秋
+						<animate attributeName="font-size" to="30" dur="2s" begin="virtual.end" fill="freeze"/>
+						<animate attributeName="y" to="10" dur="2s" begin="virtual.end" fill="freeze"/>
+						<animate attributeName="fill" to="transparent" dur="0.1ms" begin="virtual.end+2s" fill="freeze"/>
+						<animate attributeName="font-size" to="0" dur="2s" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="y" to="0" dur="2s" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="fill" to="black" dur="0.1ms" begin="animateMotion.end+1s" fill="freeze"/>
+					</text>
+				</g>
+				<g id="winterCopy" class="seasonGCopy">
+					<animateMotion dur="2s" path="" repeatCount="1" rotate="auto"  begin="virtual.end"  fill="remove" class="showG"/>
+					<animateMotion dur="2s" path="" repeatCount="1" rotate="auto"  begin="animateMotion.end+1s"  fill="remove" class="fadeG"/>
+					<circle cx="0" cy="0" r="35" fill="transparent" stroke="transparent" stroke-width="0" class="cirCopy cir_3_Copy">
+						<animate attributeName="r" to="35" dur="2s" begin="virtual.end" fill="freeze"/>
+						<animate attributeName="fill" to="transparent" dur="0.1ms" begin="virtual.end+2s" fill="freeze"/>
+						<animate attributeName="r" to="0" dur="2s" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="fill" to="white" dur="0.1ms" begin="animateMotion.end+1s" fill="freeze"/>
+					</circle>
+					<text style="font-size: 30px;font-family: '楷体';" x="0" y="10" text-anchor="middle" fill="transparent" class="seasonCopy season_0_Copy">冬
+						<animate attributeName="font-size" to="30" dur="2s" begin="virtual.end" fill="freeze"/>
+						<animate attributeName="y" to="10" dur="2s" begin="virtual.end" fill="freeze"/>
+						<animate attributeName="fill" to="transparent" dur="0.1ms" begin="virtual.end+2s" fill="freeze"/>
+						<animate attributeName="font-size" to="0" dur="2s" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="y" to="0" dur="2s" begin="animateMotion.end+1s" fill="freeze"/>
+						<animate attributeName="fill" to="black" dur="0.1ms" begin="animateMotion.end+1s" fill="freeze"/>
+					</text>
+				</g>
+	
+	
+				<circle id="people" cx="" cy="" r="0" fill="blue" style="opacity: .5;">
+					<animateMotion dur="3s" path="" repeatCount="1" rotate="auto" id="animateMotion" begin="indefinite" restart="whenNotActive" fill="freeze"/>
+					<animate attributeName="r" to="10" dur="0.1ms" begin="animateMotion.begin" fill="freeze"/>
+					<animate attributeName="r" to="0" dur="0.1ms" begin="animateMotion.end" fill="freeze"/>
+				</circle>
+				
+				<!--虚拟，不展示，主要用来作为时间的参照-->
+				<circle cx="0" cy="0" r="0" stroke="transparent" fill="transparent">
+					<animate attributeName="r" to="0" dur="1s" repeatCount="1" rotate="auto" id="virtual" begin="indefinite" restart="whenNotActive"/>
+				</circle>
+			</svg>
+			<div class="content content_1">
+				<a href="javascript:;" class="back" style="font-size: 30px;">back</a>
+				<ul>
+					<li>完成了PC端官网的全部修改</li>
+					<li>学习了sass和less，然而忘光了</li>
+					<li>学习了react.js,然而现在记得的只有MVVM模式</li>
+					<li>协助研发，利用AI制作了一套字体图标，并上传到阿里妈妈，然而现在已经忘记了制作的方法</li>
+					<li>看完了jquery基础教程</li>
+				</ul>
+			</div>
+			<div class="content content_2">
+				<a href="javascript:;" class="back" style="font-size: 30px;">back</a>
+				<ul>
+					<li>用swiper写了手机单屏翻页效果的demo，为手机官网修改做准备</li>
+					<li>研究了zepto.js和Jquery源码,然而功力不够，并不能很好的理解</li>
+					<li>看完了高性能建站指南</li>
+					<li>较深入的学习了html5的audio标签，并编写了一个简单音乐播放器效果</li>
+					<li>简单了解了node.js,然而忘光了</li>
+				</ul>
+			</div>
+			<div class="content content_3">
+				<a href="javascript:;" class="back" style="font-size: 30px;">back</a>
+				<ul>
+					<li>学习了WebGL,并且应用three.js写了许多demo，然而也不怎么记得了</li>
+					<li>了解学习了vue.js，然而记住的只是它和react.js很相似</li>
+					<li>了解了脚手架工具gulp，然而我们并没有项目可以使用上，所以没有深入去看，忘了</li>
+					<li>较深入的学习了html5的vidoe标签，并利用野狗线上数据库，实现了弹幕效果</li>
+					<li>完成了捷风网站的编写</li>
+				</ul>
+			</div>
+			<div class="content content_4">
+				<a href="javascript:;" class="back" style="font-size: 30px;">back</a>
+				<ul>
+					<li>尝试着用JQ封装了一些简单的插件，例如轮播图，图片boom效果，手机图形锁效果等</li>
+					<li>JS高级教程基本上学完了，目前JS的代码，都是使用原生的JS完成</li>
+					<li>freecodecamp.cn上的题目做到了282题</li>
+					<li>学习了SVG，基本上可以使用SVG作出动态或静态效果</li>
+					<li>基本上完成了动态科技网站的修改</li>
+					<li>使用canvas，写出了俄罗斯方块游戏</li>
+				</ul>
+			</div>
+			<img src="img/blackhole.png" class="blackHole"/>
+		</div>
+		<div id="container_2" style="width: 100%;height: 100%;background: gray;">
+			<p class="prompt" style="font-size: 40px;text-align: center;">请用竖屏展示</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var container_1_dom=document.getElementById("container_1");
+		var container_2_dom=document.getElementById("container_2");
+		var winHei=window.innerHeight;
+		var winWid=window.innerWidth;
+		var svgDom=document.getElementById("svg_1");
+		var seasonDom=document.getElementsByClassName("season");
+		var pathDom=document.getElementById("path");
+		var cirDom=document.getElementsByClassName("cir");
+		var cirCopyDom=document.getElementsByClassName("cirCopy");
+		var animateMotionDom=document.getElementById("animateMotion");
+		var peopleDom=document.getElementById("people");
+		var seasonGDom=document.getElementsByClassName("seasonG");
+		var seasonGCopyDom=document.getElementsByClassName("seasonGCopy");
+		var contentDom=document.getElementsByClassName("content");
+		var blackHoleDom=document.getElementsByClassName("blackHole")[0];
+		var backDom=document.getElementsByClassName("back");
+		var fadeGDom=document.getElementsByClassName("fadeG");
+		var showGDom=document.getElementsByClassName("showG");
+		var leftRight=35;
+		var topBottom=35;//左右和上下预留的PX数
+		var pointArr=[];//点坐标
+		var textXStr;
+		var textYStr;
+		var pathStr="M ";//路劲坐标
+		var rectPathStr;//方块运动路劲
+		var iMpoitArr=[];//几个转折点的集合
+		var listStart=0;//运动起始点
+		var con=true;//为ture时，表示点击季节可以触发事件，用于滑块运动过程中，点击其他的季节，滑块路径不变
+//		svgDom.style.height=winHei;//可以用css直接实现，不需要JS
+
+		window.addEventListener('deviceorientation', handleOrientation,true);//
+		function handleOrientation(){//横屏的时候
+			var winHei=window.innerHeight;
+			var winWid=window.innerWidth;
+			if(winWid>winHei){//横屏的时候
+				container_1_dom.style.display="none";
+				container_2_dom.style.lineHeight=winHei+"px";
+			}else{
+				container_1_dom.style.display="block";
+			}
+		}
+		
+		for(var i=0;i<4;i++){//坐标集合
+			var pointSolo=[];//引用类型和基本类型的区别，要写在里面，基本类型的话，可以在外面声明
+			pointSolo[0]=(leftRight+(winWid-2*leftRight)/3*i)|0;
+			pointSolo[1]=(topBottom+(winHei-2*topBottom)/3*(3-i))|0;
+			pointArr.push(pointSolo);
+		}
+		Array.prototype.forEach.call(cirDom,function(e){//圆坐标设定
+			var list=Array.prototype.indexOf.call(cirDom,e);
+			var fadeDom=cirCopyDom[list].previousElementSibling;//该方法兼容性有待测试,镜像g标签
+			var showGListDom=showGDom[list];
+			e.setAttribute("cx",pointArr[list][0]);
+			e.setAttribute("cy",pointArr[list][1]);
+			if(list==0){//定义每个季节湮灭的路径和重现路径
+				var fadePath="M "+pointArr[list][0]+" "+pointArr[list][1]+" Q ";
+				fadePath+=winWid+" "+winHei*70/100+" "+winWid*50/100+" "+winHei*50/100;
+				fadeDom.setAttribute("path",fadePath);
+				var pathArr=fadePath.split(" ");
+				var showPath=sortArr(pathArr,[0,6,7,3,4,5,1,2]);
+				showGListDom.setAttribute("path",showPath);//重现路径
+			}
+			if(list==1){//
+				var fadePath="M "+pointArr[list][0]+" "+pointArr[list][1]+" Q ";
+				fadePath+=winWid+" "+winHei*55/100+" "+winWid*50/100+" "+winHei*50/100;
+				fadeDom.setAttribute("path",fadePath);
+				var pathArr=fadePath.split(" ");
+				var showPath=sortArr(pathArr,[0,6,7,3,4,5,1,2]);
+				showGListDom.setAttribute("path",showPath);//重现路径
+			}
+			if(list==2){//
+				var fadePath="M "+pointArr[list][0]+" "+pointArr[list][1]+" Q ";
+				fadePath+=-winWid*20/100+" "+winHei*45/100+" "+winWid*50/100+" "+winHei*50/100;
+				fadeDom.setAttribute("path",fadePath);
+				var pathArr=fadePath.split(" ");
+				var showPath=sortArr(pathArr,[0,6,7,3,4,5,1,2]);
+				showGListDom.setAttribute("path",showPath);//重现路径
+			}
+			if(list==3){//
+				var fadePath="M "+pointArr[list][0]+" "+pointArr[list][1]+" Q ";
+				fadePath+=-winWid*15/100+" "+winHei*25/100+" "+winWid*50/100+" "+winHei*50/100;
+				fadeDom.setAttribute("path",fadePath);
+				var pathArr=fadePath.split(" ");
+				var showPath=sortArr(pathArr,[0,6,7,3,4,5,1,2]);
+				showGListDom.setAttribute("path",showPath);//重现路径
+			}
+		})
+		Array.prototype.forEach.call(seasonDom,function(e){//位置坐标设定
+			var list=Array.prototype.indexOf.call(seasonDom,e);
+			e.setAttribute("x",pointArr[list][0]);
+			e.setAttribute("y",pointArr[list][1]+10);
+		})
+		pathStr+=pointArr[0][0]+" "+pointArr[0][1]+" Q 0 "+winHei*75/100+" "+pointArr[1][0]+" "+pointArr[1][1];
+		pathStr+=" Q "+winWid*80/100+" "+winHei*50/100+" "+pointArr[2][0]+" "+pointArr[2][1];
+		pathStr+=" Q "+winWid*50/100+" "+winHei*5/100+" "+pointArr[3][0]+" "+pointArr[3][1];
+		iMpoitArr=[[0,winHei*75/100],[winWid*80/100,winHei*50/100],[winWid*50/100,winHei*5/100]];
+		pathDom.setAttribute("d",pathStr);
+		peopleDom.setAttribute("cx",pointArr[0][0]);
+		peopleDom.setAttribute("cy",pointArr[0][1]);
+//		peopleDom.setAttribute("transform","rotate(-100 "+pointArr[0][0]+" "+pointArr[0][1]+")");
+		Array.prototype.forEach.call(seasonGDom,function(e){
+			e.onclick=function(){//手机端应该使用touch，这里为了方便(但是好像有300ms的延迟问题)
+//				alert("cccc");
+				var list=Array.prototype.indexOf.call(seasonGDom,e);
+//				peopleDom.setAttribute("transform","rotate(0 0 0)");//因为旋转之后，坐标系也跟着旋转，所以要归位
+				peopleDom.setAttribute("cx","0");
+				peopleDom.setAttribute("cy","0");
+				if(list-listStart==3&&con){//
+					con=false;
+					animateMotionDom.setAttribute("path",pathStr);
+					animateMotionDom.setAttribute("dur","3s");
+					listStart=list;
+					setTimeout(function(){//滑块停止运动之后
+						con=true;
+						blackHoleDom.className="blackHole rotate";
+						contentDom[list].setAttribute("style","transition: all 1s 3s ease-in-out;transform: scale(1);");
+						setTimeout(function(){
+							Array.prototype.forEach.call(seasonGDom,function(e){
+								e.setAttribute("style","transform: scale(0)");
+							})
+						},1000)
+					},3000)
+				}else if(list-listStart==2&&con){//2-0或者3-1
+					con=false;
+					rectPathStr="M "+pointArr[listStart][0]+" "+pointArr[listStart][1]+" Q "+iMpoitArr[listStart][0]+" "+iMpoitArr[listStart][1];
+					rectPathStr+=" "+pointArr[parseInt(listStart)+1][0]+" "+pointArr[parseInt(listStart)+1][1];
+					rectPathStr+=" Q "+iMpoitArr[parseInt(listStart)+1][0]+" "+iMpoitArr[parseInt(listStart)+1][1]+" "+pointArr[list][0]+" "+pointArr[list][1];
+					animateMotionDom.setAttribute("path",rectPathStr);
+					animateMotionDom.setAttribute("dur","2s");
+					listStart=list;
+					setTimeout(function(){//防止多次点击bug
+						con=true;//防止多次点击bug
+						blackHoleDom.className="blackHole rotate";
+						contentDom[list].setAttribute("style","transition: all 1s 3s ease-in-out;transform: scale(1);");
+						setTimeout(function(){
+							Array.prototype.forEach.call(seasonGDom,function(e){
+								e.setAttribute("style","transform: scale(0)");
+							})
+						},1000)
+					},2000)
+				}else if(list-listStart==1&&con){
+					con=false;
+					rectPathStr="M "+pointArr[listStart][0]+" "+pointArr[listStart][1]+" Q "+iMpoitArr[listStart][0]+" "+iMpoitArr[listStart][1];
+					rectPathStr+=" "+pointArr[list][0]+" "+pointArr[list][1];
+					animateMotionDom.setAttribute("path",rectPathStr);
+					animateMotionDom.setAttribute("dur","1s");
+					listStart=list;
+					setTimeout(function(){//防止多次点击bug
+						con=true;
+						blackHoleDom.className="blackHole rotate";
+						contentDom[list].setAttribute("style","transition: all 1s 3s ease-in-out;transform: scale(1);");
+						setTimeout(function(){
+							Array.prototype.forEach.call(seasonGDom,function(e){
+								e.setAttribute("style","transform: scale(0)");
+							})
+						},1000)
+					},1000)
+				}else if(list-listStart==-1&&con){
+					con=false;
+					rectPathStr="M "+pointArr[listStart][0]+" "+pointArr[listStart][1]+" Q "+iMpoitArr[list][0]+" "+iMpoitArr[list][1];
+					rectPathStr+=" "+pointArr[list][0]+" "+pointArr[list][1];
+					animateMotionDom.setAttribute("path",rectPathStr);
+					animateMotionDom.setAttribute("dur","1s");
+					listStart=list;
+					setTimeout(function(){//防止多次点击bug
+						con=true;
+						blackHoleDom.className="blackHole rotate";
+						contentDom[list].setAttribute("style","transition: all 1s 3s ease-in-out;transform: scale(1);");
+						setTimeout(function(){
+							Array.prototype.forEach.call(seasonGDom,function(e){
+								e.setAttribute("style","transform: scale(0)");
+							})
+						},1000)
+					},1000)
+				}else if(list-listStart==-2&&con){
+					con=false;
+					rectPathStr="M "+pointArr[listStart][0]+" "+pointArr[listStart][1]+" Q "+iMpoitArr[listStart-1][0]+" "+iMpoitArr[listStart-1][1];
+					rectPathStr+=" "+pointArr[listStart-1][0]+" "+pointArr[listStart-1][1];
+					rectPathStr+=" Q "+iMpoitArr[listStart-2][0]+" "+iMpoitArr[listStart-2][1]+" "+pointArr[list][0]+" "+pointArr[list][1];
+					animateMotionDom.setAttribute("path",rectPathStr);
+					animateMotionDom.setAttribute("dur","2s");
+					listStart=list;
+					setTimeout(function(){//防止多次点击bug
+						con=true;
+						blackHoleDom.className="blackHole rotate";
+						contentDom[list].setAttribute("style","transition: all 1s 3s ease-in-out;transform: scale(1);");
+						setTimeout(function(){
+							Array.prototype.forEach.call(seasonGDom,function(e){
+								e.setAttribute("style","transform: scale(0)");
+							})
+						},1000)
+					},2000)
+				}else if(list-listStart==-3&&con){//
+					con=false;
+					rectPathStr="M "+pointArr[3][0]+" "+pointArr[3][1]+" Q "+winWid*50/100+" "+winHei*5/100+" "+pointArr[2][0]+" "+pointArr[2][1];
+					rectPathStr+=" Q "+winWid*80/100+" "+winHei*50/100+" "+pointArr[1][0]+" "+pointArr[1][1];
+					rectPathStr+=" Q 0 "+winHei*75/100+" "+pointArr[0][0]+" "+pointArr[0][1];
+					animateMotionDom.setAttribute("path",rectPathStr);
+					animateMotionDom.setAttribute("dur","3s");
+					listStart=list;
+					setTimeout(function(){//防止多次点击bug
+						con=true;
+						blackHoleDom.className="blackHole rotate";
+						contentDom[list].setAttribute("style","transition: all 1s 3s ease-in-out;transform: scale(1);");
+						setTimeout(function(){
+							Array.prototype.forEach.call(seasonGDom,function(e){
+								e.setAttribute("style","transform: scale(0)");
+							})
+						},1000)
+					},3000)
+				}else if(con){//点击自己
+					blackHoleDom.className="blackHole rotate";
+					contentDom[list].setAttribute("style","transition: all 1s 3s ease-in-out;transform: scale(1);");
+					rectPathStr="M "+pointArr[listStart][0]+" "+pointArr[listStart][1]+" L "+pointArr[listStart][0]+" "+pointArr[listStart][1];
+					animateMotionDom.setAttribute("path",rectPathStr);
+					animateMotionDom.setAttribute("dur","0.5s");
+					setTimeout(function(){
+						Array.prototype.forEach.call(seasonGDom,function(e){
+							e.setAttribute("style","transform: scale(0)");
+						})
+					},1500)
+				}
+			}
+		})
+//		peopleDom.setAttribute("transform","rotate(-60 "+pointArr[0][0]+" "+pointArr[0][1]+")");//默认旋转坐标是SVG左上角。后两个参数是我们设置的旋转坐标，这里设置为图形起点
+		Array.prototype.forEach.call(backDom,function(e){
+			e.onclick=function(){
+//				alert("bbbb")
+				blackHoleDom.className="blackHole";
+				Array.prototype.forEach.call(contentDom,function(e){
+					e.setAttribute("style","transform: scale(0);transition: all 1s ease-in-out");
+				})
+				//e.parentElement.setAttribute("style","transform: scale(0);transition: all 1s ease-in-out");	
+//				Array.prototype.forEach.call(cResetDom,function(c){
+////					c.setAttribute("r","35");//修改这个无效，r.animVal的值没有变
+////					c.r.animVal.value="35";//This object is read-only。不能修改，大爷
+////				c.setAttribute("begin","0s");//这样设置也无效，大爷
+//				})
+//				setTimeout(function(){
+					Array.prototype.forEach.call(seasonGDom,function(e){
+						e.setAttribute("style","transform: scale(1);transition: all .5s 1s ease-in-out;");
+					})
+//				},3000)
+			}
+		})
+		
+		function sortArr(arr){//重新组合数组
+			var listArr=arguments[1];
+			if(arr.length!==listArr.length){//如果长度不同的话，不重排，直接返回(自己使用，可以不搞这么多判断，比如这里还要判断参数是不是数组之类的)
+				return
+			}else{
+				var arrNew=[];
+				for(var i=0;i<arr.length;i++){
+					arrNew.push(arr[arguments[1][i]]);
+				}
+				return arrNew.join(" ");
+			}
+		}
+		//sortArr("a",[1,.2,3,6,5]);
+	</script>
+</html>
